@@ -15,7 +15,7 @@
   --color-gold: #C8A55F;
   --color-gold-dark: #A8884A;
   --color-success: #2E7D4F;
-  --color-border: #E5DFD2;
+  --color-rule: #E5DFD2;
 
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
 
@@ -69,7 +69,7 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-4 rounded-[10px] font-semibold text-base text-charcoal bg-cream-dark hover:bg-border active:scale-[0.98] transition-all duration-150 min-h-[52px];
+    @apply inline-flex items-center justify-center gap-2 px-6 py-4 rounded-[10px] font-semibold text-base text-charcoal bg-cream-dark hover:bg-rule active:scale-[0.98] transition-all duration-150 min-h-[52px];
   }
 
   .btn-outline {
