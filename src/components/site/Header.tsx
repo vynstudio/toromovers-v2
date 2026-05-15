@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
@@ -48,13 +49,15 @@ export function Header() {
         }`}
       >
         <div className="container-page flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-md bg-toro-red flex items-center justify-center text-white font-bold text-lg">
-              T
-            </div>
-            <span className="font-bold text-lg tracking-tight text-charcoal">
-              Toro Movers
-            </span>
+          <Link href="/" className="flex items-center" aria-label="Toro Movers — home">
+            <Image
+              src="/logo-horizontal.svg"
+              alt="Toro Movers"
+              width={180}
+              height={32}
+              priority
+              className="h-7 md:h-8 w-auto"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
