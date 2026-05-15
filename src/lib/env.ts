@@ -4,7 +4,7 @@
 // (logs instead of sends, scripts don't load) rather than throwing.
 //
 // "PLACEHOLDER" is treated as missing because that's the value seeded in
-// .env.example / Vercel project setup until real keys are pasted in.
+// .env.example / Netlify project setup until real keys are pasted in.
 
 const isSet = (v: string | undefined): v is string =>
   typeof v === "string" && v.length > 0 && v !== "PLACEHOLDER";

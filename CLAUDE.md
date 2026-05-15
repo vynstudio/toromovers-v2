@@ -11,7 +11,7 @@ Goal: top-5 ranking in 12 months. Quote-form-only (no public pricing).
 - Resend for transactional email
 - Framer Motion for subtle scroll reveals only
 - lucide-react for icons
-- Vercel for hosting + analytics
+- **Deploy target: Netlify ONLY.** Do not add @vercel/* packages, Vercel docs references, or Vercel-specific configurations. The repo uses netlify.toml + @netlify/plugin-nextjs.
 
 ## Design system — Palette B (Charcoal & Bull Red)
 - Primary (charcoal): #1A1A1A
