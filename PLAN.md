@@ -5,7 +5,7 @@ Update this file at the end of each phase. Mark phases ✅ DONE, 🔵 IN PROGRES
 
 ## Locked decisions (do not revisit without explicit user direction)
 
-- **Stack:** Next.js 16 App Router + TypeScript + Tailwind v4 + Resend + Vercel
+- **Stack:** Next.js 16 App Router + TypeScript + Tailwind v4 + Resend + Netlify
 - **Palette:** White (#FFFFFF) + Charcoal (#121316) + Toro Red (#C8102E) + Gold (#E8A317). Graphite body (#525252).
 - **Fonts:** Inter (sans, primary), Fraunces (serif, accents only)
 - **Positioning:** Family-owned full-service moving company in Central Florida
@@ -16,7 +16,7 @@ Update this file at the end of each phase. Mark phases ✅ DONE, 🔵 IN PROGRES
 - **Insurance claim allowed:** "Fully insured" + "Commercial liability and cargo coverage" — NEVER "licensed" or "FL DOT".
 - **Deposit:** Required. Variable by job size. Mentioned as "small deposit confirms the booking."
 - **Phone:** 689-600-2720
-- **Domain:** toromovers.net (current site at this domain; new build deploys to toromovers-v2.vercel.app first, DNS cutover later)
+- **Domain:** toromovers.net (current site at this domain; new build deploys to a Netlify subdomain first, DNS cutover later)
 
 ## Site architecture
 
@@ -37,7 +37,7 @@ Header, MobileBottomBar, Footer, TrustStrip, ReviewCard, BigQuote, Hero, HowItWo
 
 ## Environment variables (required for deploy)
 
-These go in Vercel project settings. Until set, builds use safe placeholders.
+These go in Netlify project settings (Site configuration → Environment variables). Until set, builds use safe placeholders.
 
 | Variable | Purpose | Source |
 |---|---|---|
@@ -76,7 +76,7 @@ Stack scaffolded, design system, shared components, homepage, service pages, pal
 - Sections: who we are, where we work, insurance/credentials, contact
 - One CTA at the bottom to /quote
 
-### ⏳ Phase 4: Pre-deploy polish
+### ✅ Phase 4: Pre-deploy polish — DONE
 - robots.txt
 - sitemap.xml (auto-generated from app routes)
 - Open Graph image at /public/og-image.jpg (1200x630)
@@ -84,12 +84,12 @@ Stack scaffolded, design system, shared components, homepage, service pages, pal
 - 404 page styled to match the site
 - Performance audit (Lighthouse 95+ mobile target)
 
-### ⏳ Phase 5: Deploy to Vercel
-- User connects GitHub repo to Vercel
-- User adds env vars in Vercel project settings
-- First deploy to toromovers-v2.vercel.app
+### ⏳ Phase 5: Deploy to Netlify
+- User connects GitHub repo to Netlify (Site configuration → Build & deploy → Link repository)
+- User adds env vars in Netlify project settings (Site configuration → Environment variables)
+- First deploy to a Netlify subdomain (e.g., toromovers-v2.netlify.app)
 - User reviews preview
-- DNS cutover: toromovers.net → Vercel (user decides timing)
+- DNS cutover: toromovers.net → Netlify (user decides timing)
 
 ## Working agreements
 
