@@ -5,19 +5,19 @@ const steps = [
     icon: ClipboardList,
     num: "01",
     title: "Tell us about your move",
-    body: "Fill out our 60-second form. We&rsquo;ll ask about your size, dates, and where you&rsquo;re going.",
+    body: "Fill out our 60-second form. We’ll ask about your size, dates, and where you’re going.",
   },
   {
     icon: Calendar,
     num: "02",
     title: "Get a real quote, fast",
-    body: "Same-day. No surprise fees. You&rsquo;ll know the price before we ever load a box.",
+    body: "Same-day. No surprise fees. You’ll know the price before we ever load a box.",
   },
   {
     icon: Truck,
     num: "03",
     title: "We show up and move you",
-    body: "Bilingual crew, fully insured, on-time. We treat your stuff like it&rsquo;s ours.",
+    body: "Bilingual crew, fully insured, on-time. We treat your stuff like it’s ours.",
   },
 ];
 
@@ -44,10 +44,7 @@ export function HowItWorks() {
               <step.icon className="w-6 h-6" />
             </div>
             <h3 className="mb-3 text-xl">{step.title}</h3>
-            <p
-              className="text-graphite text-base"
-              dangerouslySetInnerHTML={{ __html: step.body }}
-            />
+            <p className="text-graphite text-base">{step.body}</p>
           </div>
         ))}
       </div>

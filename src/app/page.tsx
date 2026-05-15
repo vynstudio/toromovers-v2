@@ -8,11 +8,13 @@ import { FAQ } from "@/components/site/FAQ";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
 import { LocalBusinessSchema } from "@/components/site/LocalBusinessSchema";
+import { FAQSchema } from "@/components/site/FAQSchema";
 
 export default function Home() {
   return (
     <>
       <LocalBusinessSchema />
+      <FAQSchema />
       <main>
         <Hero />
         <TrustStrip />

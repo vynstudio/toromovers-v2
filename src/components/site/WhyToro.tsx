@@ -11,7 +11,7 @@ const reasons = [
   },
   {
     title: "Bilingual from day one",
-    body: "English or Spanish — your crew speaks your language. Built for Central Florida&rsquo;s real community.",
+    body: "English or Spanish — your crew speaks your language. Built for Central Florida’s real community.",
   },
   {
     title: "Fully licensed and insured",
@@ -42,10 +42,7 @@ export function WhyToro() {
               <CheckCircle2 className="w-6 h-6 text-toro-red shrink-0 mt-0.5" />
               <div>
                 <h4 className="font-semibold text-charcoal mb-1.5">{r.title}</h4>
-                <p
-                  className="text-graphite text-sm leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: r.body }}
-                />
+                <p className="text-graphite text-sm leading-relaxed">{r.body}</p>
               </div>
             </div>
           ))}
