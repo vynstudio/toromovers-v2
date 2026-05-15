@@ -1,9 +1,9 @@
 export function TrustStrip() {
   const items = [
-    { label: "FL DOT #PLACEHOLDER", sub: "Licensed mover" },
-    { label: "$1M cargo coverage", sub: "Fully insured" },
-    { label: "30+ five-star reviews", sub: "On Google" },
-    { label: "Family-owned since 2020", sub: "Central Florida" },
+    { label: "From $85/hr", sub: "2-hour minimum" },
+    { label: "Family-owned", sub: "Central Florida" },
+    { label: "30+ reviews", sub: "4.9 on Google" },
+    { label: "Fully insured", sub: "Liability & cargo" },
   ];
   return (
     <div className="bg-charcoal text-white py-6 border-y border-charcoal-light">

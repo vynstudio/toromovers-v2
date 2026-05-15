@@ -2,20 +2,20 @@ import { CheckCircle2 } from "lucide-react";
 
 const reasons = [
   {
-    title: "Quotes by text, in under an hour",
-    body: "Send us a photo of your stuff. We'll text back a flat-rate quote — no in-home estimate visit needed for most moves.",
+    title: "Family-owned and local",
+    body: "Based in Central Florida, focused on Orlando, Lake Mary, and Winter Park. Not a national franchise.",
   },
   {
-    title: "Frank's cell is 689-600-2720",
-    body: "Not a call center. Not a chatbot. When you call, the family that owns the trucks answers — or texts back within the hour.",
+    title: "Hourly pricing, no surprises",
+    body: "$85/hour for 2 movers with a 2-hour minimum. No fuel surcharges, stair fees, or charges added at completion.",
   },
   {
-    title: "Bilingual crews, English or Spanish",
-    body: "Crew speaks your language. Quotes, contracts, and moving-day communication all available in either.",
+    title: "Bilingual service",
+    body: "All communication available in English or Spanish at the same rate. Built for Central Florida.",
   },
   {
-    title: "Local, focused, and small on purpose",
-    body: "We don't run a national franchise or chase every job in the state. We stay focused on Orlando, Lake Mary, and Winter Park so our crews know the buildings, the routes, and the parking rules.",
+    title: "Fully insured",
+    body: "Commercial liability and cargo coverage. Certificate of insurance available on request before booking.",
   },
 ];
 
@@ -24,13 +24,11 @@ export function WhyToro() {
     <section className="section container-page">
       <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16">
         <div>
-          <h2 className="mb-5">
-            Four things you won&rsquo;t get from the big moving brands.
-          </h2>
+          <h2 className="mb-5">Why Toro Movers</h2>
           <p className="text-graphite text-lg leading-relaxed">
-            Most moving companies want jobs. We want repeat clients. That&rsquo;s
-            why everything here is built for Central Florida — not a national
-            playbook.
+            A focused moving service for Central Florida. Family-owned,
+            transparent pricing, bilingual crews, and a clear scope of work —
+            no add-ons, no surprises.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 gap-5">

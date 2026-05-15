@@ -27,25 +27,25 @@ export default function Home() {
             <p className="text-sm font-semibold text-toro-red uppercase tracking-wider mb-3">
               Real moves. Real reviews.
             </p>
-            <h2>What 30+ Central Florida families said.</h2>
+            <h2>What clients say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <ReviewCard
               name="Maria G."
               city="Orlando"
-              body="They showed up on time, wrapped everything carefully, and the price matched the quote exactly. No surprises."
+              body="On time, careful, and the final bill matched the estimate. No issues."
               date="Apr 2026"
             />
             <ReviewCard
               name="James T."
               city="Lake Mary"
-              body="Professional, fast, and bilingual — which mattered for my family. Best moving experience I&rsquo;ve had in years."
+              body="Professional crew and the bilingual service was a plus. Easy experience."
               date="Mar 2026"
             />
             <ReviewCard
               name="Sofia R."
               city="Winter Park"
-              body="Family-owned and it shows. They treated my apartment like it was their own. Highly recommend."
+              body="Careful with the property and quick on the job. Would book again."
               date="Feb 2026"
             />
           </div>

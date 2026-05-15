@@ -7,17 +7,17 @@ export function FinalCta() {
       <div className="container-page">
         <div className="bg-toro-red text-white rounded-2xl p-8 md:p-14 text-center">
           <h2 className="text-white mb-4 max-w-2xl mx-auto">
-            Get your quote in under 60 seconds.
+            Request your estimate
           </h2>
           <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
-            Get your free, no-pressure quote in 60 seconds. We&rsquo;ll text you back within the hour.
+            Fill out the form or call 689-600-2720. Most estimates back within the hour.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/quote"
               className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-[10px] font-semibold text-base text-charcoal bg-white hover:bg-off-white active:scale-[0.98] transition-all min-h-[52px]"
             >
-              Get my free quote <ArrowRight className="w-4 h-4" />
+              Get my free estimate <ArrowRight className="w-4 h-4" />
             </Link>
             <a
               href="tel:+16896002720"

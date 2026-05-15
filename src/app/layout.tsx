@@ -15,15 +15,18 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://toromovers.net"),
   title: {
-    default: "Toro Movers — Honest, Family-Owned Movers in Central Florida",
+    default: "Toro Movers | Moving Company in Orlando, Lake Mary & Winter Park FL",
     template: "%s | Toro Movers",
   },
   description:
-    "Family-owned, licensed movers serving Orlando, Lake Mary, Winter Park and Central Florida. Honest pricing, bilingual service, on-time crews. Get a free quote.",
+    "Family-owned moving company in Orlando, Lake Mary & Winter Park. Bilingual, fully insured, hourly rates from $85/hr. Call 689-600-2720 for an estimate.",
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Toro Movers",
+    title: "Moving Company in Orlando, Lake Mary & Winter Park FL",
+    description:
+      "Family-owned movers in Central Florida. Bilingual, fully insured, $85/hr starting. Apartment, home, and office moves.",
   },
   robots: { index: true, follow: true },
 };

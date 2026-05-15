@@ -5,17 +5,17 @@ const cities = [
   {
     href: "/movers-orlando",
     name: "Orlando",
-    blurb: "Downtown, Lake Nona, Dr. Phillips, MetroWest — we cover all of Orange County.",
+    blurb: "Including downtown, Lake Nona, Dr. Phillips, MetroWest, and Baldwin Park.",
   },
   {
     href: "/movers-lake-mary",
     name: "Lake Mary",
-    blurb: "Heathrow, Markham Woods, Timacuan — premium homes deserve premium care.",
+    blurb: "Including Heathrow, Markham Woods, Timacuan, and surrounding Seminole County areas.",
   },
   {
     href: "/movers-winter-park",
     name: "Winter Park",
-    blurb: "Park Avenue to Aloma — careful crews for historic homes and luxury apartments.",
+    blurb: "Including Park Avenue, Aloma, and surrounding historic and residential areas.",
   },
 ];
 
@@ -24,15 +24,10 @@ export function ServiceAreas() {
     <section className="section bg-charcoal text-white">
       <div className="container-page">
         <div className="max-w-2xl mb-12">
-          <p className="text-sm font-semibold text-gold uppercase tracking-wider mb-3">
-            Service areas
-          </p>
-          <h2 className="text-white">
-            We don&rsquo;t move everywhere. On purpose.
-          </h2>
+          <h2 className="text-white">Service areas</h2>
           <p className="mt-5 text-white/80 text-lg">
-            We focus where we live. That&rsquo;s how we keep crews local, quotes
-            accurate, and reviews honest.
+            Toro Movers serves Orlando, Lake Mary, Winter Park, and the
+            surrounding Central Florida area.
           </p>
         </div>
 

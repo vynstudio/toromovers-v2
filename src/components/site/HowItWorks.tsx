@@ -4,20 +4,20 @@ const steps = [
   {
     icon: ClipboardList,
     num: "01",
-    title: "Send us your details",
-    body: "Fill out the form or text us at 689-600-2720. A photo of your apartment is enough — no need for an in-home visit.",
+    title: "Tell us about your move",
+    body: "Use the form or text 689-600-2720. Apartment or home size, move date, and the two ZIP codes is all we need.",
   },
   {
     icon: Calendar,
     num: "02",
-    title: "Get a flat-rate quote",
-    body: "Within the hour, usually faster. We walk you through hourly rates, expected time, and lock in your date with a small deposit.",
+    title: "Get an estimate by phone",
+    body: "We call back within the hour with the hourly rate, expected duration, and date confirmation. A deposit holds the booking.",
   },
   {
     icon: Truck,
     num: "03",
-    title: "We show up and move you",
-    body: "Bilingual crew, our own truck (not a rental), and a printed copy of your quote. We don't ask for a deposit.",
+    title: "Crew arrives on schedule",
+    body: "Two bilingual movers complete the job at the agreed rate. You pay the balance at the end. No surprise fees.",
   },
 ];
 
