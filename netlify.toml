@@ -1,16 +1,16 @@
-# Netlify build config for Toro Movers v2 (Next.js App Router).
-#
-# The Next.js runtime plugin (@netlify/plugin-nextjs) is auto-installed by
-# Netlify when it detects a Next.js project, so we don't need to declare it
-# here. Build settings below match Vercel defaults and what `npm run build`
-# produces locally.
-
 [build]
   command = "npm run build"
   publish = ".next"
 
 [build.environment]
-  # Pin Node to match local dev (Next 16 needs >=18.18; v20 LTS is safest)
+  NEXT_USE_NETLIFY_EDGE = "true"
   NODE_VERSION = "20"
-  # Surface warnings as warnings, not errors, during build
-  NEXT_TELEMETRY_DISABLED = "1"
+
+# Next.js runtime is auto-installed by Netlify; explicit declaration for clarity
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Force HTTPS and www -> apex redirects handled by Netlify default config; no custom rewrites here.

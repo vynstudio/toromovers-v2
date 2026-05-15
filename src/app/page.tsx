@@ -40,7 +40,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
             <ReviewCard
               name="Maria G."
               city="Orlando"

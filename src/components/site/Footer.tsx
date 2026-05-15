@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-charcoal text-white/80 pt-16 pb-24 lg:pb-12 mt-16">
       <div className="container-page">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8">
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <Image
@@ -33,6 +33,17 @@ export function Footer() {
               <li><Link href="/apartment-moves" className="hover:text-white">Apartment Moves</Link></li>
               <li><Link href="/home-moves" className="hover:text-white">Home Moves</Link></li>
               <li><Link href="/commercial-moves" className="hover:text-white">Commercial Moves</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white/60 font-medium text-sm lowercase tracking-[0.2em] mb-4">
+              service areas
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/movers-orlando" className="hover:text-white">Orlando movers</Link></li>
+              <li><Link href="/movers-lake-mary" className="hover:text-white">Lake Mary movers</Link></li>
+              <li><Link href="/movers-winter-park" className="hover:text-white">Winter Park movers</Link></li>
             </ul>
           </div>
 

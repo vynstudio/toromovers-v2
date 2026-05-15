@@ -5,7 +5,7 @@ Update this file at the end of each phase. Mark phases ✅ DONE, 🔵 IN PROGRES
 
 ## Locked decisions (do not revisit without explicit user direction)
 
-- **Stack:** Next.js 16 App Router + TypeScript + Tailwind v4 + Resend + Vercel
+- **Stack:** Next.js 16 App Router + TypeScript + Tailwind v4 + Resend + Netlify
 - **Palette:** White (#FFFFFF) + Charcoal (#121316) + Toro Red (#C8102E) + Gold (#E8A317). Graphite body (#525252).
 - **Fonts:** Inter (sans, primary), Fraunces (serif, accents only)
 - **Positioning:** Family-owned full-service moving company in Central Florida
@@ -16,7 +16,7 @@ Update this file at the end of each phase. Mark phases ✅ DONE, 🔵 IN PROGRES
 - **Insurance claim allowed:** "Fully insured" + "Commercial liability and cargo coverage" — NEVER "licensed" or "FL DOT".
 - **Deposit:** Required. Variable by job size. Mentioned as "small deposit confirms the booking."
 - **Phone:** 689-600-2720
-- **Domain:** toromovers.net (current site at this domain; new build deploys to toromovers-v2.vercel.app first, DNS cutover later)
+- **Domain:** toromovers.net (current site at this domain; new build deploys to a Netlify subdomain first, DNS cutover later)
 
 ## Site architecture
 
@@ -27,17 +27,17 @@ Update this file at the end of each phase. Mark phases ✅ DONE, 🔵 IN PROGRES
 - ✅ `/commercial-moves`
 - ✅ `/quote` — multi-step lead form
 - ✅ `/thank-you` — pixel-firing confirmation page
-- ⏳ `/movers-orlando` — city landing page
-- ⏳ `/movers-lake-mary` — city landing page
-- ⏳ `/movers-winter-park` — city landing page
-- ⏳ `/about` — minimal corporate about page
+- ✅ `/movers-orlando` — city landing page
+- ✅ `/movers-lake-mary` — city landing page
+- ✅ `/movers-winter-park` — city landing page
+- ✅ `/about` — corporate about page (DONE)
 
 ### Components (all in /src/components/site/)
 Header, MobileBottomBar, Footer, TrustStrip, ReviewCard, BigQuote, Hero, HowItWorks, ServiceAreas, WhyToro, FAQ, FinalCta, LocalBusinessSchema, FAQSchema
 
 ## Environment variables (required for deploy)
 
-These go in Vercel project settings. Until set, builds use safe placeholders.
+These go in Netlify project settings (Site configuration → Environment variables). Until set, builds use safe placeholders.
 
 | Variable | Purpose | Source |
 |---|---|---|
@@ -64,19 +64,19 @@ Stack scaffolded, design system, shared components, homepage, service pages, pal
 - Use process.env vars with safe fallbacks so build never breaks if env vars are missing
 - Form fields: name, phone, email, move-from ZIP, move-to ZIP, move date, move size (studio/1BR/2BR/3BR/4BR+/office), notes, source (which page form was submitted from)
 
-### ⏳ Phase 2: City landing pages
+### ✅ Phase 2: City landing pages — DONE
 - `/movers-orlando`, `/movers-lake-mary`, `/movers-winter-park`
 - Per-city H1 + meta description + neighborhood-specific copy
 - Same TrustStrip + FinalCta + Footer pattern as service pages
 - LocalBusiness schema per city with geo coordinates
 - Internal links between cities
 
-### ⏳ Phase 3: About page (`/about`)
+### ✅ Phase 3: About page (`/about`) — DONE
 - Brief, corporate-clean, no owner names
 - Sections: who we are, where we work, insurance/credentials, contact
 - One CTA at the bottom to /quote
 
-### ⏳ Phase 4: Pre-deploy polish
+### ✅ Phase 4: Pre-deploy polish — DONE
 - robots.txt
 - sitemap.xml (auto-generated from app routes)
 - Open Graph image at /public/og-image.jpg (1200x630)
@@ -84,12 +84,12 @@ Stack scaffolded, design system, shared components, homepage, service pages, pal
 - 404 page styled to match the site
 - Performance audit (Lighthouse 95+ mobile target)
 
-### ⏳ Phase 5: Deploy to Vercel
-- User connects GitHub repo to Vercel
-- User adds env vars in Vercel project settings
-- First deploy to toromovers-v2.vercel.app
+### ⏳ Phase 5: Deploy to Netlify
+- User connects GitHub repo to Netlify (Site configuration → Build & deploy → Link repository)
+- User adds env vars in Netlify project settings (Site configuration → Environment variables)
+- First deploy to a Netlify subdomain (e.g., toromovers-v2.netlify.app)
 - User reviews preview
-- DNS cutover: toromovers.net → Vercel (user decides timing)
+- DNS cutover: toromovers.net → Netlify (user decides timing)
 
 ## Working agreements
 
