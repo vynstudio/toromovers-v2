@@ -1,60 +1,68 @@
 "use server";
 
-import { redirect } from "next/navigation";
-import { quoteSchema } from "@/lib/schemas/quote";
+import { quoteSchema, type QuoteFormValues } from "@/lib/schemas/quote";
 import { sendLeadNotification } from "@/lib/email/lead-notification";
 
-export type SubmitState =
-  | { status: "idle" }
-  | { status: "error"; message: string; fieldErrors?: Record<string, string> };
+export type SubmitResult =
+  | { ok: true; id: string }
+  | {
+      ok: false;
+      message: string;
+      errors?: Record<string, string>;
+    };
 
 function shortId(): string {
   return Math.random().toString(36).slice(2, 8).toUpperCase();
 }
 
+// Accepts either FormData (from a <form action={}>) or a plain object (when
+// called directly from a client component). Validates with zod, sends the
+// lead email, returns the result. Never redirects — the client handles
+// navigation so it can chain analytics/UI work between submit and redirect.
 export async function submitQuote(
-  _prev: SubmitState,
-  formData: FormData,
-): Promise<SubmitState> {
-  const raw = {
-    moveType: formData.get("moveType"),
-    fromZip: formData.get("fromZip"),
-    toZip: formData.get("toZip"),
-    areaDescription: formData.get("areaDescription") ?? "",
-    moveDate: (formData.get("moveDate") ?? "") || null,
-    isFlexibleDate: formData.get("isFlexibleDate") === "true",
-    moveSize: formData.get("moveSize"),
-    name: formData.get("name"),
-    phone: formData.get("phone"),
-    email: formData.get("email"),
-    notes: formData.get("notes") ?? "",
-    source: formData.get("source") ?? "/quote",
-  };
+  input: FormData | Partial<QuoteFormValues>,
+): Promise<SubmitResult> {
+  const raw =
+    input instanceof FormData
+      ? {
+          moveType: input.get("moveType"),
+          fromZip: input.get("fromZip"),
+          toZip: input.get("toZip"),
+          areaDescription: input.get("areaDescription") ?? "",
+          moveDate: (input.get("moveDate") ?? "") || null,
+          isFlexibleDate: input.get("isFlexibleDate") === "true",
+          moveSize: input.get("moveSize"),
+          name: input.get("name"),
+          phone: input.get("phone"),
+          email: input.get("email"),
+          notes: input.get("notes") ?? "",
+          source: input.get("source") ?? "/quote",
+        }
+      : input;
 
   const parsed = quoteSchema.safeParse(raw);
   if (!parsed.success) {
-    const fieldErrors: Record<string, string> = {};
+    const errors: Record<string, string> = {};
     for (const issue of parsed.error.issues) {
       const key = issue.path.join(".") || "form";
-      if (!fieldErrors[key]) fieldErrors[key] = issue.message;
+      if (!errors[key]) errors[key] = issue.message;
     }
     return {
-      status: "error",
+      ok: false,
       message: "Please double-check the highlighted fields.",
-      fieldErrors,
+      errors,
     };
   }
 
-  const leadId = shortId();
-  const result = await sendLeadNotification(parsed.data, leadId);
-
+  const id = shortId();
+  const result = await sendLeadNotification(parsed.data, id);
   if (!result.ok) {
     return {
-      status: "error",
+      ok: false,
       message:
         "We couldn't send your request right now. Please call 689-600-2720.",
     };
   }
 
-  redirect(`/thank-you?id=${leadId}`);
+  return { ok: true, id };
 }

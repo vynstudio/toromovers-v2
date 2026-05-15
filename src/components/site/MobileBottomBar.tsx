@@ -1,7 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone, MessageSquare, FileText } from "lucide-react";
 
+// Routes where the bottom action bar competes with the page's own primary CTA
+// (the multi-step form's footer or the thank-you confirmation). Suppress it
+// there so the page-level CTA can own the bottom of the viewport.
+const HIDE_ON = new Set(["/quote", "/thank-you"]);
+
 export function MobileBottomBar() {
+  const pathname = usePathname();
+  if (HIDE_ON.has(pathname)) return null;
+
   return (
     <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-charcoal text-white border-t border-charcoal-light grid grid-cols-3 shadow-elevated">
       <a
