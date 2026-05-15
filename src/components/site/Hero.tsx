@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Phone, Star } from "lucide-react";
 
 export function Hero() {
@@ -8,28 +8,21 @@ export function Hero() {
       <div className="container-page relative pt-10 pb-16 md:pt-20 md:pb-28">
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center">
           <div>
-            <p className="text-sm font-semibold text-toro-red uppercase tracking-wider mb-4">
-              Central Florida Moving Company
-            </p>
-
             <h1 className="mb-6">
-              Trusted Central Florida Moving Company{" "}
+              Trusted Central Florida Moving Company<br />
               <span className="text-toro-red">Serving Orlando, Lake Mary &amp; Winter Park</span>
             </h1>
 
             <p className="text-lg md:text-xl mb-8 max-w-xl text-graphite">
-              Family-owned moving company serving Orlando, Lake Mary, and
-              Winter Park. Fully insured with honest pricing. Apartment, home,
-              and commercial moves throughout Central Florida.
+              Family-owned moving company serving Orlando, Lake Mary, and Winter Park.
+              Fully insured with honest pricing. Apartment, home, and commercial moves
+              throughout Central Florida.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            <div className="mb-6">
               <Link href="/quote" className="btn-primary">
                 Get my free estimate <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href="tel:+16896002720" className="btn-outline">
-                <Phone className="w-4 h-4" /> 689-600-2720
-              </a>
             </div>
 
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-graphite-light">
@@ -48,15 +41,27 @@ export function Hero() {
           </div>
 
           <div className="hidden lg:block">
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-elevated bg-charcoal">
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-elevated bg-charcoal">
               <Image
                 src="/hero-truck.jpg"
-                alt="Toro Movers truck in Central Florida"
+                alt=""
                 fill
                 priority
                 sizes="(max-width: 1024px) 0px, 50vw"
                 className="object-cover"
+                aria-hidden="true"
               />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/hero-truck.jpg"
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src="/hero-move.mp4" type="video/mp4" />
+              </video>
               <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-transparent">
                 <div className="flex items-center gap-1 mb-2">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -64,7 +69,8 @@ export function Hero() {
                   ))}
                 </div>
                 <p className="text-white text-sm leading-relaxed mb-2 font-medium">
-                  &ldquo;Showed up on time, finished early, and the bill matched the quote to the dollar.&rdquo;
+                  &ldquo;Showed up on time, finished early, and the bill matched
+                  the estimate to the dollar.&rdquo;
                 </p>
                 <p className="text-white/70 text-xs">
                   — Maria G., Orlando · 2-bedroom move

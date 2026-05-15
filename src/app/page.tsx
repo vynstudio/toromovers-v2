@@ -8,6 +8,7 @@ import { FAQ } from "@/components/site/FAQ";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
 import { LocalBusinessSchema } from "@/components/site/LocalBusinessSchema";
+import { BigQuote } from "@/components/site/BigQuote";
 import { FAQSchema } from "@/components/site/FAQSchema";
 
 export default function Home() {
@@ -24,8 +25,8 @@ export default function Home() {
 
         <section className="section container-page">
           <div className="text-center mb-12 max-w-2xl mx-auto">
-            <p className="text-sm font-semibold text-toro-red uppercase tracking-wider mb-3">
-              Real moves. Real reviews.
+            <p className="text-sm font-medium text-graphite-light lowercase tracking-[0.2em] mb-3">
+              client reviews
             </p>
             <h2>What clients say</h2>
           </div>
@@ -51,6 +52,7 @@ export default function Home() {
           </div>
         </section>
 
+        <BigQuote />
         <FAQ />
         <FinalCta />
         <Footer />

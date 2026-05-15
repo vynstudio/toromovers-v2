@@ -20,8 +20,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
-              Services
+            <h4 className="text-white/60 font-medium text-sm lowercase tracking-[0.2em] mb-4">
+              services
             </h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/apartment-moves" className="hover:text-white">Apartment Moves</Link></li>
@@ -31,8 +31,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
-              Company
+            <h4 className="text-white/60 font-medium text-sm lowercase tracking-[0.2em] mb-4">
+              company
             </h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white">About us</Link></li>
@@ -41,8 +41,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
-              Contact
+            <h4 className="text-white/60 font-medium text-sm lowercase tracking-[0.2em] mb-4">
+              contact
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
