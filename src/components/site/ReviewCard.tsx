@@ -10,16 +10,18 @@ interface ReviewCardProps {
 
 export function ReviewCard({ name, city, rating = 5, body, date }: ReviewCardProps) {
   return (
-    <article className="bg-off-white rounded-lg p-6 border border-rule shadow-card flex flex-col">
-      <div className="flex items-center gap-1 mb-3">
+    <article className="border-t border-rule pt-8 flex flex-col h-full">
+      <div className="flex items-center gap-1 mb-5">
         {Array.from({ length: rating }).map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-gold text-gold" />
+          <Star key={i} className="w-3.5 h-3.5 fill-gold text-gold" />
         ))}
       </div>
-      <p className="text-graphite leading-relaxed mb-5 flex-1">&ldquo;{body}&rdquo;</p>
-      <div className="border-t border-rule pt-4">
+      <p className="text-charcoal text-lg leading-relaxed mb-8 flex-1">
+        &ldquo;{body}&rdquo;
+      </p>
+      <div>
         <p className="font-semibold text-charcoal text-sm">{name}</p>
-        <p className="text-xs text-graphite-light">
+        <p className="text-xs text-graphite-light lowercase tracking-[0.15em] mt-1">
           {city}{date ? ` · ${date}` : ""}
         </p>
       </div>
