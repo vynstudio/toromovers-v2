@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { CITIES } from "@/lib/cities";
 
 const services = [
   { href: "/apartment-moves", label: "Apartment moves" },
@@ -11,11 +12,18 @@ const services = [
   { href: "/commercial-moves", label: "Commercial moves" },
 ];
 
+const serviceAreas = CITIES.map((c) => ({
+  href: c.href,
+  label: c.navLabel,
+}));
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [areasOpen, setAreasOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const areasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -31,8 +39,12 @@ export function Header() {
 
   useEffect(() => {
     const onClickOutside = (e: MouseEvent) => {
-      if (servicesRef.current && !servicesRef.current.contains(e.target as Node)) {
+      const t = e.target as Node;
+      if (servicesRef.current && !servicesRef.current.contains(t)) {
         setServicesOpen(false);
+      }
+      if (areasRef.current && !areasRef.current.contains(t)) {
+        setAreasOpen(false);
       }
     };
     document.addEventListener("mousedown", onClickOutside);
@@ -61,19 +73,28 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
-            <Link href="/" className="px-4 py-2 text-sm font-medium text-graphite hover:text-charcoal hover:bg-off-white rounded-md transition-colors">
+            <Link
+              href="/"
+              className="px-4 py-2 text-sm font-medium text-graphite hover:text-charcoal hover:bg-off-white rounded-md transition-colors"
+            >
               Home
             </Link>
+
             <div ref={servicesRef} className="relative">
               <button
                 type="button"
-                onClick={() => setServicesOpen(!servicesOpen)}
+                onClick={() => {
+                  setServicesOpen(!servicesOpen);
+                  setAreasOpen(false);
+                }}
                 className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-graphite hover:text-charcoal hover:bg-off-white rounded-md transition-colors"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
                 Services
-                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                />
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg border border-rule shadow-elevated py-1 z-50">
@@ -90,7 +111,43 @@ export function Header() {
                 </div>
               )}
             </div>
-            <Link href="/about" className="px-4 py-2 text-sm font-medium text-graphite hover:text-charcoal hover:bg-off-white rounded-md transition-colors">
+
+            <div ref={areasRef} className="relative">
+              <button
+                type="button"
+                onClick={() => {
+                  setAreasOpen(!areasOpen);
+                  setServicesOpen(false);
+                }}
+                className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-graphite hover:text-charcoal hover:bg-off-white rounded-md transition-colors"
+                aria-expanded={areasOpen}
+                aria-haspopup="true"
+              >
+                Service Areas
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${areasOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {areasOpen && (
+                <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg border border-rule shadow-elevated py-1 z-50">
+                  {serviceAreas.map((a) => (
+                    <Link
+                      key={a.href}
+                      href={a.href}
+                      onClick={() => setAreasOpen(false)}
+                      className="block px-4 py-2.5 text-sm text-graphite hover:text-charcoal hover:bg-off-white"
+                    >
+                      {a.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/about"
+              className="px-4 py-2 text-sm font-medium text-graphite hover:text-charcoal hover:bg-off-white rounded-md transition-colors"
+            >
               About
             </Link>
           </nav>
@@ -128,9 +185,14 @@ export function Header() {
             </button>
           </div>
           <nav className="container-page flex-1 flex flex-col gap-1 pt-4 pb-8">
-            <Link href="/" onClick={() => setOpen(false)} className="py-4 text-xl font-medium text-charcoal border-b border-rule">
+            <Link
+              href="/"
+              onClick={() => setOpen(false)}
+              className="py-4 text-xl font-medium text-charcoal border-b border-rule"
+            >
               Home
             </Link>
+
             <div className="py-4 border-b border-rule">
               <p className="text-xl font-medium text-charcoal mb-3">Services</p>
               <div className="flex flex-col gap-2 pl-4">
@@ -146,10 +208,36 @@ export function Header() {
                 ))}
               </div>
             </div>
-            <Link href="/about" onClick={() => setOpen(false)} className="py-4 text-xl font-medium text-charcoal border-b border-rule">
+
+            <div className="py-4 border-b border-rule">
+              <p className="text-xl font-medium text-charcoal mb-3">Service Areas</p>
+              <div className="flex flex-col gap-2 pl-4">
+                {serviceAreas.map((a) => (
+                  <Link
+                    key={a.href}
+                    href={a.href}
+                    onClick={() => setOpen(false)}
+                    className="py-1.5 text-base text-graphite"
+                  >
+                    {a.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              href="/about"
+              onClick={() => setOpen(false)}
+              className="py-4 text-xl font-medium text-charcoal border-b border-rule"
+            >
               About
             </Link>
-            <Link href="/quote" onClick={() => setOpen(false)} className="btn-primary mt-8">
+
+            <Link
+              href="/quote"
+              onClick={() => setOpen(false)}
+              className="btn-primary mt-8"
+            >
               Get my free estimate
             </Link>
           </nav>

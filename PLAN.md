@@ -27,9 +27,9 @@ Update this file at the end of each phase. Mark phases ✅ DONE, 🔵 IN PROGRES
 - ✅ `/commercial-moves`
 - ✅ `/quote` — multi-step lead form
 - ✅ `/thank-you` — pixel-firing confirmation page
-- ⏳ `/movers-orlando` — city landing page
-- ⏳ `/movers-lake-mary` — city landing page
-- ⏳ `/movers-winter-park` — city landing page
+- ✅ `/movers-orlando` — city landing page
+- ✅ `/movers-lake-mary` — city landing page
+- ✅ `/movers-winter-park` — city landing page
 - ⏳ `/about` — minimal corporate about page
 
 ### Components (all in /src/components/site/)
@@ -64,7 +64,7 @@ Stack scaffolded, design system, shared components, homepage, service pages, pal
 - Use process.env vars with safe fallbacks so build never breaks if env vars are missing
 - Form fields: name, phone, email, move-from ZIP, move-to ZIP, move date, move size (studio/1BR/2BR/3BR/4BR+/office), notes, source (which page form was submitted from)
 
-### ⏳ Phase 2: City landing pages
+### ✅ Phase 2: City landing pages — DONE
 - `/movers-orlando`, `/movers-lake-mary`, `/movers-winter-park`
 - Per-city H1 + meta description + neighborhood-specific copy
 - Same TrustStrip + FinalCta + Footer pattern as service pages
