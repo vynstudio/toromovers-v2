@@ -25,8 +25,8 @@ Update this file at the end of each phase. Mark phases ✅ DONE, 🔵 IN PROGRES
 - ✅ `/apartment-moves`
 - ✅ `/home-moves`
 - ✅ `/commercial-moves`
-- ⏳ `/quote` — multi-step lead form
-- ⏳ `/thank-you` — pixel-firing confirmation page
+- ✅ `/quote` — multi-step lead form
+- ✅ `/thank-you` — pixel-firing confirmation page
 - ⏳ `/movers-orlando` — city landing page
 - ⏳ `/movers-lake-mary` — city landing page
 - ⏳ `/movers-winter-park` — city landing page
@@ -54,7 +54,7 @@ These go in Vercel project settings. Until set, builds use safe placeholders.
 ### ✅ Phase 0: Foundation (DONE)
 Stack scaffolded, design system, shared components, homepage, service pages, palette, content cleanup, BigQuote, dropdown nav.
 
-### ⏳ Phase 1: Lead capture engine (`/quote` + `/thank-you` + Resend)
+### ✅ Phase 1: Lead capture engine (`/quote` + `/thank-you` + Resend) — DONE
 - Multi-step form using react-hook-form + zod
 - 5 steps: move type → from/to ZIPs → date → size → contact info
 - Mobile-first, one question per screen, progress bar, big tap targets

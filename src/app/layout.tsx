@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/site/Header";
 import { MobileBottomBar } from "@/components/site/MobileBottomBar";
+import { AnalyticsScripts } from "@/components/site/AnalyticsScripts";
 import "./globals.css";
 
 const inter = Inter({
@@ -54,6 +55,7 @@ export default function RootLayout({
         <Header />
         <div className="pb-20 lg:pb-0">{children}</div>
         <MobileBottomBar />
+        <AnalyticsScripts />
         <Analytics />
         <SpeedInsights />
       </body>
