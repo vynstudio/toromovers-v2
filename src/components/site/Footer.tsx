@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
@@ -8,11 +9,16 @@ export function Footer() {
       <div className="container-page">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-md bg-toro-red flex items-center justify-center text-white font-bold text-lg">
-                T
-              </div>
-              <span className="font-bold text-lg text-white">Toro Movers</span>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/logo-isotype.svg"
+                alt=""
+                width={36}
+                height={28}
+                className="h-7 w-auto"
+                aria-hidden="true"
+              />
+              <span className="font-bold text-lg text-white tracking-tight">Toro Movers</span>
             </div>
             <p className="text-sm leading-relaxed">
               Family-owned, fully insured movers serving Central Florida.
