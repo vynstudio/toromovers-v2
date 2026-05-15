@@ -8,8 +8,9 @@ import { FAQ } from "@/components/site/FAQ";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
 import { LocalBusinessSchema } from "@/components/site/LocalBusinessSchema";
-import { BigQuote } from "@/components/site/BigQuote";
 import { FAQSchema } from "@/components/site/FAQSchema";
+import { BigQuote } from "@/components/site/BigQuote";
+import { NeighborhoodWall } from "@/components/site/NeighborhoodWall";
 
 export default function Home() {
   return (
@@ -18,17 +19,26 @@ export default function Home() {
       <FAQSchema />
       <main>
         <Hero />
-        <TrustStrip />
+        <NeighborhoodWall />
         <HowItWorks />
+        <TrustStrip />
         <ServiceAreas />
         <WhyToro />
 
         <section className="section container-page">
-          <div className="text-center mb-12 max-w-2xl mx-auto">
-            <p className="text-sm font-medium text-graphite-light lowercase tracking-[0.2em] mb-3">
-              client reviews
-            </p>
-            <h2>What clients say</h2>
+          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-24 mb-16 md:mb-20">
+            <div>
+              <p className="text-xs font-medium text-graphite-light lowercase tracking-[0.25em] mb-6">
+                client reviews
+              </p>
+              <h2>What clients say.</h2>
+            </div>
+            <div className="lg:pt-4">
+              <p className="text-lg md:text-xl text-graphite leading-relaxed">
+                Verified Google reviews from Central Florida families served
+                over the past year.
+              </p>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <ReviewCard

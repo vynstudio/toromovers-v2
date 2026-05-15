@@ -23,27 +23,48 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="section container-page">
-      <div className="max-w-2xl mb-12">
-        <h2>Local Moving Services Across Orlando, Lake Mary &amp; Winter Park</h2>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {steps.map((step) => (
-          <div
-            key={step.num}
-            className="relative bg-off-white rounded-xl p-7 border border-rule"
-          >
-            <span className="absolute top-5 right-5 text-5xl font-bold text-rule leading-none select-none">
-              {step.num}
-            </span>
-            <div className="w-12 h-12 rounded-lg bg-toro-red text-white flex items-center justify-center mb-5">
-              <step.icon className="w-6 h-6" />
-            </div>
-            <h3 className="mb-3 text-xl">{step.title}</h3>
-            <p className="text-graphite text-base">{step.body}</p>
+    <section className="section bg-charcoal text-white relative overflow-hidden">
+      <div
+        className="absolute inset-0 opacity-30 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 60% at 20% 30%, rgba(200, 16, 46, 0.15), transparent), radial-gradient(ellipse 60% 50% at 80% 70%, rgba(232, 163, 23, 0.08), transparent)",
+        }}
+        aria-hidden="true"
+      />
+      <div className="container-page relative">
+        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20 mb-16 md:mb-24">
+          <div>
+            <p className="text-xs font-medium text-white/50 lowercase tracking-[0.25em] mb-6">
+              the process
+            </p>
+            <h2 className="text-white">
+              Local moving services across Orlando, Lake Mary &amp; Winter Park.
+            </h2>
           </div>
-        ))}
+          <div className="lg:pt-4">
+            <p className="text-lg md:text-xl text-white/70 leading-relaxed">
+              Three steps from inquiry to moving day. No in-home visits. No
+              high-pressure quoting. No deposits forfeited.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+          {steps.map((step) => (
+            <div
+              key={step.num}
+              className="relative border-t border-white/15 pt-8"
+            >
+              <span className="absolute top-8 right-0 text-xs font-mono text-white/40 tracking-wider">
+                {step.num}
+              </span>
+              <step.icon className="w-7 h-7 text-toro-red mb-6" strokeWidth={1.5} />
+              <h3 className="text-white mb-4 text-2xl md:text-3xl">{step.title}</h3>
+              <p className="text-white/70 text-base leading-relaxed">{step.body}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

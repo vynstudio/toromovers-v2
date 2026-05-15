@@ -1,5 +1,3 @@
-import { CheckCircle2 } from "lucide-react";
-
 const reasons = [
   {
     title: "Family-owned and local",
@@ -22,23 +20,27 @@ const reasons = [
 export function WhyToro() {
   return (
     <section className="section container-page">
-      <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16">
-        <div>
-          <h2 className="mb-5">Why Central Florida Homeowners Choose Toro Movers</h2>
+      <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-24">
+        <div className="lg:sticky lg:top-32 lg:self-start">
+          <p className="text-xs font-medium text-graphite-light lowercase tracking-[0.25em] mb-6">
+            our approach
+          </p>
+          <h2 className="mb-6">
+            Why Central Florida homeowners choose Toro Movers.
+          </h2>
           <p className="text-graphite text-lg leading-relaxed">
-            A focused moving service for Central Florida. Family-owned,
-            transparent pricing, careful crews, and a clear scope of work —
-            no add-ons, no surprises.
+            A focused moving service for Central Florida — not a national
+            franchise chasing every job in every state.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 gap-5">
-          {reasons.map((r) => (
-            <div key={r.title} className="flex gap-3">
-              <CheckCircle2 className="w-6 h-6 text-toro-red shrink-0 mt-0.5" />
-              <div>
-                <h4 className="font-semibold text-charcoal mb-1.5">{r.title}</h4>
-                <p className="text-graphite text-sm leading-relaxed">{r.body}</p>
-              </div>
+        <div className="grid gap-10 md:gap-12">
+          {reasons.map((reason, i) => (
+            <div key={reason.title} className="border-t border-rule pt-8">
+              <span className="text-xs font-mono text-graphite-light tracking-wider mb-3 block">
+                0{i + 1}
+              </span>
+              <h3 className="mb-3 text-2xl md:text-3xl">{reason.title}</h3>
+              <p className="text-graphite text-lg leading-relaxed">{reason.body}</p>
             </div>
           ))}
         </div>
