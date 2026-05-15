@@ -30,7 +30,7 @@ Update this file at the end of each phase. Mark phases ✅ DONE, 🔵 IN PROGRES
 - ✅ `/movers-orlando` — city landing page
 - ✅ `/movers-lake-mary` — city landing page
 - ✅ `/movers-winter-park` — city landing page
-- ⏳ `/about` — minimal corporate about page
+- ✅ `/about` — corporate about page (DONE)
 
 ### Components (all in /src/components/site/)
 Header, MobileBottomBar, Footer, TrustStrip, ReviewCard, BigQuote, Hero, HowItWorks, ServiceAreas, WhyToro, FAQ, FinalCta, LocalBusinessSchema, FAQSchema
@@ -71,7 +71,7 @@ Stack scaffolded, design system, shared components, homepage, service pages, pal
 - LocalBusiness schema per city with geo coordinates
 - Internal links between cities
 
-### ⏳ Phase 3: About page (`/about`)
+### ✅ Phase 3: About page (`/about`) — DONE
 - Brief, corporate-clean, no owner names
 - Sections: who we are, where we work, insurance/credentials, contact
 - One CTA at the bottom to /quote
