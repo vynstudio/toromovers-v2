@@ -1,6 +1,6 @@
 export function TrustStrip() {
   const items = [
-    { label: "From $85/hr", sub: "2-hour minimum" },
+    { label: "Honest pricing", sub: "Phone estimate" },
     { label: "Family-owned", sub: "Central Florida" },
     { label: "30+ reviews", sub: "4.9 on Google" },
     { label: "Fully insured", sub: "Liability & cargo" },

@@ -39,7 +39,7 @@ export default function Home() {
             <ReviewCard
               name="James T."
               city="Lake Mary"
-              body="Professional crew and the bilingual service was a plus. Easy experience."
+              body="Professional crew, clear communication, and everything arrived intact. Easy experience."
               date="Mar 2026"
             />
             <ReviewCard

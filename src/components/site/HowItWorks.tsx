@@ -5,19 +5,19 @@ const steps = [
     icon: ClipboardList,
     num: "01",
     title: "Tell us about your move",
-    body: "Use the form or text 689-600-2720. Apartment or home size, move date, and the two ZIP codes is all we need.",
+    body: "Use the form on this site or call 689-600-2720. Apartment or home size, move date, and the two ZIP codes is all we need to begin.",
   },
   {
     icon: Calendar,
     num: "02",
     title: "Get an estimate by phone",
-    body: "We call back within the hour with the hourly rate, expected duration, and date confirmation. A deposit holds the booking.",
+    body: "Toro Movers will call within the hour to review the scope, schedule availability, and a fair estimate. A deposit confirms the booking.",
   },
   {
     icon: Truck,
     num: "03",
     title: "Crew arrives on schedule",
-    body: "Two bilingual movers complete the job at the agreed rate. You pay the balance at the end. No surprise fees.",
+    body: "A trained Toro Movers crew completes the job at the agreed estimate. Final payment is due on completion. No surprise fees.",
   },
 ];
 

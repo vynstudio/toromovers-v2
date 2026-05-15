@@ -19,9 +19,8 @@ export function Hero() {
 
             <p className="text-lg md:text-xl mb-8 max-w-xl text-graphite">
               Family-owned moving company serving Orlando, Lake Mary, and
-              Winter Park. Bilingual, fully insured, hourly rates starting at
-              $85. Apartment, home, and office moves throughout Central
-              Florida.
+              Winter Park. Fully insured with honest pricing. Apartment, home,
+              and commercial moves throughout Central Florida.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -33,9 +32,19 @@ export function Hero() {
               </a>
             </div>
 
-            <p className="text-sm text-graphite-light">
-              4.9 on Google · 30+ reviews · Fully insured
-            </p>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-graphite-light">
+              <div className="flex items-center gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="w-3.5 h-3.5 fill-gold text-gold" />
+                ))}
+              </div>
+              <span>4.9 on Google · 30+ reviews</span>
+              <span className="text-rule">·</span>
+              <a href="tel:+16896002720" className="font-semibold text-charcoal hover:text-toro-red transition-colors">
+                <Phone className="w-3.5 h-3.5 inline mr-1 -mt-0.5" />
+                689-600-2720
+              </a>
+            </div>
           </div>
 
           <div className="hidden lg:block">

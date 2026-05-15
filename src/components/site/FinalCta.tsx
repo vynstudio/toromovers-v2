@@ -10,7 +10,7 @@ export function FinalCta() {
             Request your estimate
           </h2>
           <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
-            Fill out the form or call 689-600-2720. Most estimates back within the hour.
+            Fill out the form or call 689-600-2720. Most estimates returned within the hour.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

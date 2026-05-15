@@ -8,15 +8,15 @@ import { FinalCta } from "@/components/site/FinalCta";
 export const metadata: Metadata = {
   title: "Commercial & Office Movers in Orlando, Lake Mary & Winter Park",
   description:
-    "Commercial and office movers in Central Florida. Office, retail, and small business relocations in Orlando, Lake Mary, and Winter Park. Bilingual crews, $85/hr.",
+    "Commercial and office moving service in Central Florida. Office, retail, and small business relocations in Orlando, Lake Mary, and Winter Park. Family-owned, fully insured.",
 };
 
 export default function CommercialMovesPage() {
   return (
     <main>
       <section className="section container-page">
-        <p className="text-sm font-semibold text-toro-red uppercase tracking-wider mb-4">
-          Commercial Moves
+        <p className="text-sm font-medium text-graphite-light lowercase tracking-[0.2em] mb-4">
+          commercial moves
         </p>
         <h1 className="mb-6 max-w-3xl">
           Commercial &amp; Office Movers in Central Florida
@@ -42,25 +42,23 @@ export default function CommercialMovesPage() {
           <h2 className="mb-6">Office &amp; Commercial Relocations</h2>
           <p className="mb-4">
             Toro Movers handles office, retail, and small business relocations throughout Central
-            Florida. Standard hourly pricing applies: $85/hour for a 2-mover crew, with larger
-            crews available on request for bigger relocations.
+            Florida. Crew size and schedule are tailored on the phone estimate based on scope and
+            timing needs.
           </p>
           <p className="mb-4">
             For business moves, after-hours and weekend scheduling is often preferred to minimize
-            operational disruption. Coordinate scheduling on the phone estimate.
+            operational disruption. Specialty handling (server room, retail fixtures) coordinated
+            during scheduling.
           </p>
 
           <h2 className="mt-12 mb-6">Common Commercial Moves Handled</h2>
           <ul className="space-y-2 mb-8 text-graphite">
             <li>· Office relocations (single-suite to multi-floor)</li>
             <li>· Retail store moves and fit-outs</li>
-            <li>· Small warehouse and equipment transfers</li>
             <li>· Coworking and shared-office moves</li>
             <li>· Server room and IT equipment relocations</li>
+            <li>· Small warehouse and equipment transfers</li>
           </ul>
-          <p className="text-sm text-graphite-light">
-            Phone estimate confirms crew size, schedule, and any specialty equipment needed.
-          </p>
         </div>
       </section>
 

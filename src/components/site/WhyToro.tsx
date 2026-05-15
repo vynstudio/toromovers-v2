@@ -6,12 +6,12 @@ const reasons = [
     body: "Based in Central Florida, focused on Orlando, Lake Mary, and Winter Park. Not a national franchise.",
   },
   {
-    title: "Hourly pricing, no surprises",
-    body: "$85/hour for 2 movers with a 2-hour minimum. No fuel surcharges, stair fees, or charges added at completion.",
+    title: "Honest pricing",
+    body: "No fuel surcharges, stair fees, or charges added at completion. The estimate is the price.",
   },
   {
-    title: "Bilingual service",
-    body: "All communication available in English or Spanish at the same rate. Built for Central Florida.",
+    title: "Phone estimates, same day",
+    body: "Most inquiries are returned with an estimate within the hour. No in-home visit required for most moves.",
   },
   {
     title: "Fully insured",
@@ -27,7 +27,7 @@ export function WhyToro() {
           <h2 className="mb-5">Why Central Florida Homeowners Choose Toro Movers</h2>
           <p className="text-graphite text-lg leading-relaxed">
             A focused moving service for Central Florida. Family-owned,
-            transparent pricing, bilingual crews, and a clear scope of work —
+            transparent pricing, careful crews, and a clear scope of work —
             no add-ons, no surprises.
           </p>
         </div>
