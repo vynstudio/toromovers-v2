@@ -25,7 +25,7 @@ export function HowItWorks() {
   return (
     <section className="section container-page">
       <div className="max-w-2xl mb-12">
-        <h2>How does this actually work?</h2>
+        <h2>Local Moving Services Across Orlando, Lake Mary &amp; Winter Park</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

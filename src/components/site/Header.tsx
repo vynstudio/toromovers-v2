@@ -6,9 +6,9 @@ import { Menu, X, Phone } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/movers-orlando", label: "Orlando" },
-  { href: "/movers-lake-mary", label: "Lake Mary" },
-  { href: "/movers-winter-park", label: "Winter Park" },
+  { href: "/apartment-moves", label: "Apartment" },
+  { href: "/home-moves", label: "Home" },
+  { href: "/commercial-moves", label: "Commercial" },
   { href: "/about", label: "About" },
 ];
 

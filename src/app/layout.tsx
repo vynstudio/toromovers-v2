@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     template: "%s | Toro Movers",
   },
   description:
-    "Family-owned moving company in Orlando, Lake Mary & Winter Park. Bilingual, fully insured, hourly rates from $85/hr. Call 689-600-2720 for an estimate.",
+    "Trusted Central Florida moving company serving Orlando, Lake Mary, and Winter Park. Family-owned, fully insured, bilingual crews. Hourly rates from $85. Free quote: 689-600-2720.",
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Toro Movers",
     title: "Moving Company in Orlando, Lake Mary & Winter Park FL",
     description:
-      "Family-owned movers in Central Florida. Bilingual, fully insured, $85/hr starting. Apartment, home, and office moves.",
+      "Family-owned movers in Central Florida. Bilingual, fully insured, $85/hr starting. Apartment, home, and commercial moves.",
   },
   robots: { index: true, follow: true },
 };

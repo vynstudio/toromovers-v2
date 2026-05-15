@@ -15,18 +15,18 @@ export function Footer() {
               <span className="font-bold text-lg text-white">Toro Movers</span>
             </div>
             <p className="text-sm leading-relaxed">
-              Family-owned, licensed and insured movers serving Central Florida.
+              Family-owned, fully insured movers serving Central Florida.
             </p>
           </div>
 
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
-              Service Areas
+              Services
             </h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/movers-orlando" className="hover:text-white">Orlando</Link></li>
-              <li><Link href="/movers-lake-mary" className="hover:text-white">Lake Mary</Link></li>
-              <li><Link href="/movers-winter-park" className="hover:text-white">Winter Park</Link></li>
+              <li><Link href="/apartment-moves" className="hover:text-white">Apartment Moves</Link></li>
+              <li><Link href="/home-moves" className="hover:text-white">Home Moves</Link></li>
+              <li><Link href="/commercial-moves" className="hover:text-white">Commercial Moves</Link></li>
             </ul>
           </div>
 
@@ -63,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-charcoal-light mt-12 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-xs text-white/60">
-          <p>© {year} Toro Movers. Licensed & Insured.</p>
+          <p>© {year} Toro Movers. Family-owned &amp; insured.</p>
           <p>Made with care in Central Florida.</p>
         </div>
       </div>

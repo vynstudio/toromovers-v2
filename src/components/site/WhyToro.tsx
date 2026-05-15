@@ -24,7 +24,7 @@ export function WhyToro() {
     <section className="section container-page">
       <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16">
         <div>
-          <h2 className="mb-5">Why Toro Movers</h2>
+          <h2 className="mb-5">Why Central Florida Homeowners Choose Toro Movers</h2>
           <p className="text-graphite text-lg leading-relaxed">
             A focused moving service for Central Florida. Family-owned,
             transparent pricing, bilingual crews, and a clear scope of work —

@@ -10,7 +10,7 @@ export function FAQ() {
     <section className="section container-page">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
-          <h2>Frequently asked questions</h2>
+          <h2>FAQ: Moving in Orlando, Lake Mary &amp; Winter Park</h2>
         </div>
         <div className="divide-y divide-rule border-y border-rule">
           {faqs.map((faq, i) => {

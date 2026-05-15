@@ -13,8 +13,8 @@ export function Hero() {
             </p>
 
             <h1 className="mb-6">
-              Moving company in<br />
-              <span className="text-toro-red">Central Florida.</span>
+              Trusted Central Florida Moving Company{" "}
+              <span className="text-toro-red">Serving Orlando, Lake Mary &amp; Winter Park</span>
             </h1>
 
             <p className="text-lg md:text-xl mb-8 max-w-xl text-graphite">
