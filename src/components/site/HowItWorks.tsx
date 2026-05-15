@@ -4,20 +4,20 @@ const steps = [
   {
     icon: ClipboardList,
     num: "01",
-    title: "Tell us about your move",
-    body: "Fill out our 60-second form. We’ll ask about your size, dates, and where you’re going.",
+    title: "Send us your details",
+    body: "Fill out the form or text us at 689-600-2720. A photo of your apartment is enough — no need for an in-home visit.",
   },
   {
     icon: Calendar,
     num: "02",
-    title: "Get a real quote, fast",
-    body: "Same-day. No surprise fees. You’ll know the price before we ever load a box.",
+    title: "Get a flat-rate quote",
+    body: "Same day, usually within the hour. Written down. No 'starting at' games — the price you see is the price you pay.",
   },
   {
     icon: Truck,
     num: "03",
     title: "We show up and move you",
-    body: "Bilingual crew, fully insured, on-time. We treat your stuff like it’s ours.",
+    body: "Bilingual crew, our own truck (not a rental), and a printed copy of your quote. We don't ask for a deposit.",
   },
 ];
 
@@ -25,10 +25,7 @@ export function HowItWorks() {
   return (
     <section className="section container-page">
       <div className="max-w-2xl mb-12">
-        <p className="text-sm font-semibold text-toro-red uppercase tracking-wider mb-3">
-          How it works
-        </p>
-        <h2>Three steps. No runaround.</h2>
+        <h2>How does this actually work?</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

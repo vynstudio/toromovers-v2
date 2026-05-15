@@ -10,10 +10,7 @@ export function FAQ() {
     <section className="section container-page">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-toro-red uppercase tracking-wider mb-3">
-            Common questions
-          </p>
-          <h2>Answers, not runaround.</h2>
+          <h2>Things people ask us before booking.</h2>
         </div>
         <div className="divide-y divide-rule border-y border-rule">
           {faqs.map((faq, i) => {

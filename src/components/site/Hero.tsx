@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone, Star } from "lucide-react";
 
@@ -22,14 +23,14 @@ export function Hero() {
             </div>
 
             <h1 className="mb-6">
-              Moving day,<br />
-              <span className="text-toro-red">without the headache.</span>
+              Frank picks up the phone.<br />
+              <span className="text-toro-red">His brother drives the truck.</span>
             </h1>
 
             <p className="text-lg md:text-xl mb-8 max-w-xl text-graphite">
-              Honest pricing. Bilingual crews. Family-owned movers serving
-              Orlando, Lake Mary, and Winter Park. Get your free quote in under
-              60 seconds.
+              Family-owned moving company in Central Florida. We answer our own
+              phone, drive our own trucks, and quote real prices over text.
+              Most quotes back in under an hour.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -42,29 +43,35 @@ export function Hero() {
             </div>
 
             <p className="text-sm text-graphite-light">
-              No deposit required · No surprise fees · Same-day quotes
+              No deposit · No hidden fees · Text us a photo, get a quote
             </p>
           </div>
 
           <div className="hidden lg:block">
-            <div className="relative aspect-[4/5] rounded-2xl bg-gradient-to-br from-charcoal to-charcoal-light overflow-hidden shadow-elevated">
-              <div className="absolute inset-0 flex flex-col justify-end p-8 text-cream">
-                <div className="bg-cream/10 backdrop-blur-md rounded-xl p-5 border border-cream/20">
-                  <div className="flex items-center gap-1 mb-2">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-gold text-gold" />
-                    ))}
-                  </div>
-                  <p className="text-sm leading-relaxed mb-3">
-                    &ldquo;Showed up on time, finished early, and the bill matched the quote to the dollar. First mover I&rsquo;ve trusted in years.&rdquo;
-                  </p>
-                  <p className="text-xs text-cream/70 font-medium">
-                    — Maria G., Orlando · 2BR move
-                  </p>
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-elevated bg-charcoal">
+              <Image
+                src="/frank-toro-truck.jpg"
+                alt="Frank, owner of Toro Movers, standing in front of a moving truck in Central Florida"
+                fill
+                priority
+                sizes="(max-width: 1024px) 0px, 50vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-transparent">
+                <div className="flex items-center gap-1 mb-2">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-gold text-gold" />
+                  ))}
                 </div>
+                <p className="text-cream text-sm leading-relaxed mb-2 font-medium">
+                  &ldquo;Showed up on time, finished early, and the bill matched the quote to the dollar.&rdquo;
+                </p>
+                <p className="text-cream/70 text-xs">
+                  — Maria G., Orlando · 2-bedroom move
+                </p>
               </div>
-              <div className="absolute top-6 right-6 bg-toro-red text-cream text-xs font-bold px-3 py-1.5 rounded-full">
-                4.9 ★ Google
+              <div className="absolute top-5 left-5 bg-cream/95 backdrop-blur-sm text-charcoal text-xs font-bold px-3 py-1.5 rounded-full">
+                Frank, owner
               </div>
             </div>
           </div>

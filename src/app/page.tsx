@@ -27,7 +27,7 @@ export default function Home() {
             <p className="text-sm font-semibold text-toro-red uppercase tracking-wider mb-3">
               Real moves. Real reviews.
             </p>
-            <h2>Trusted by Central Florida families.</h2>
+            <h2>What 30+ Central Florida families said.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <ReviewCard

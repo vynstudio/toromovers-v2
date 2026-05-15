@@ -28,8 +28,7 @@ export function ServiceAreas() {
             Service areas
           </p>
           <h2 className="text-cream">
-            Built for Central Florida.<br />
-            <span className="text-gold">Not for everyone.</span>
+            We don&rsquo;t move everywhere. On purpose.
           </h2>
           <p className="mt-5 text-cream/80 text-lg">
             We focus where we live. That&rsquo;s how we keep crews local, quotes

@@ -7,7 +7,7 @@ export function FinalCta() {
       <div className="container-page">
         <div className="bg-toro-red text-cream rounded-2xl p-8 md:p-14 text-center">
           <h2 className="text-cream mb-4 max-w-2xl mx-auto">
-            Ready for a move that actually goes smoothly?
+            Get your quote in under 60 seconds.
           </h2>
           <p className="text-cream/90 text-lg mb-8 max-w-xl mx-auto">
             Get your free, no-pressure quote in 60 seconds. We&rsquo;ll text you back within the hour.

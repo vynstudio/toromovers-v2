@@ -1,21 +1,20 @@
-import { Shield, Star, Users, Clock } from "lucide-react";
-
-const items = [
-  { icon: Shield, label: "Licensed & insured" },
-  { icon: Star, label: "Bilingual crews" },
-  { icon: Users, label: "Family-owned" },
-  { icon: Clock, label: "On-time, every time" },
-];
-
 export function TrustStrip() {
+  const items = [
+    { label: "FL DOT #PLACEHOLDER", sub: "Licensed mover" },
+    { label: "$1M cargo coverage", sub: "Fully insured" },
+    { label: "30+ five-star reviews", sub: "On Google" },
+    { label: "Family-owned since 2020", sub: "Central Florida" },
+  ];
   return (
-    <div className="bg-charcoal text-cream py-4 border-y border-charcoal-light">
+    <div className="bg-charcoal text-cream py-6 border-y border-charcoal-light">
       <div className="container-page">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-5">
           {items.map((item) => (
-            <div key={item.label} className="flex items-center gap-2 justify-center md:justify-start">
-              <item.icon className="w-4 h-4 text-gold shrink-0" />
-              <span className="text-xs md:text-sm font-medium">{item.label}</span>
+            <div key={item.label} className="text-center md:text-left">
+              <p className="text-sm md:text-base font-semibold text-cream">
+                {item.label}
+              </p>
+              <p className="text-xs text-cream/60 mt-0.5">{item.sub}</p>
             </div>
           ))}
         </div>

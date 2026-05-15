@@ -2,20 +2,20 @@ import { CheckCircle2 } from "lucide-react";
 
 const reasons = [
   {
-    title: "No hidden fees, ever",
-    body: "The quote you get is the price you pay. Fuel, mileage, stairs — all included up front.",
+    title: "Quotes by text, in under an hour",
+    body: "Send us a photo of your stuff. We'll text back a flat-rate quote — no in-home estimate visit needed for most moves.",
   },
   {
-    title: "Family answers the phone",
-    body: "When you call, you talk to Frank. Not a call center. Not a bot. Just the family that owns the trucks.",
+    title: "Frank's cell is 689-600-2720",
+    body: "Not a call center. Not a chatbot. When you call, the family that owns the trucks answers — or texts back within the hour.",
   },
   {
-    title: "Bilingual from day one",
-    body: "English or Spanish — your crew speaks your language. Built for Central Florida’s real community.",
+    title: "Bilingual crews, English or Spanish",
+    body: "Crew speaks your language. Quotes, contracts, and moving-day communication all available in either.",
   },
   {
-    title: "Fully licensed and insured",
-    body: "Florida DOT registered, FMCSA compliant, and covered by full cargo and liability insurance.",
+    title: "Flat-rate pricing, written down",
+    body: "No 'starting at $89/hr' bait. You get one price for the whole job — fuel, stairs, mileage included — before we touch a box.",
   },
 ];
 
@@ -24,16 +24,13 @@ export function WhyToro() {
     <section className="section container-page">
       <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16">
         <div>
-          <p className="text-sm font-semibold text-toro-red uppercase tracking-wider mb-3">
-            Why Toro
-          </p>
           <h2 className="mb-5">
-            Built different.<br />
-            On purpose.
+            Four things you won&rsquo;t get from the big moving brands.
           </h2>
           <p className="text-graphite text-lg leading-relaxed">
-            Most moving companies care about jobs. We care about Orlando, Lake
-            Mary, and Winter Park — because we live here too.
+            Most moving companies want jobs. We want repeat clients. That&rsquo;s
+            why everything here is built for Central Florida — not a national
+            playbook.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 gap-5">
