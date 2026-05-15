@@ -4,14 +4,11 @@ import { ArrowRight, Phone, Star } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative bg-cream overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.04] pointer-events-none" aria-hidden="true">
-        <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-toro-red blur-3xl" />
-      </div>
+    <section className="relative bg-white overflow-hidden">
       <div className="container-page relative pt-10 pb-16 md:pt-20 md:pb-28">
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cream-dark border border-rule mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-off-white border border-rule mb-6">
               <div className="flex">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-gold text-gold" />
@@ -28,9 +25,10 @@ export function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl mb-8 max-w-xl text-graphite">
-              Family-owned moving company in Central Florida. We answer our own
-              phone, drive our own trucks, and quote real prices over text.
-              Most quotes back in under an hour.
+              Family-owned, fully insured movers serving Central Florida.
+              Bilingual W-2 crews, hourly rates starting at $85, and same-day
+              estimates. Apartment, house, and office moves done right —
+              Frank answers the phone himself.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -63,14 +61,14 @@ export function Hero() {
                     <Star key={i} className="w-4 h-4 fill-gold text-gold" />
                   ))}
                 </div>
-                <p className="text-cream text-sm leading-relaxed mb-2 font-medium">
+                <p className="text-white text-sm leading-relaxed mb-2 font-medium">
                   &ldquo;Showed up on time, finished early, and the bill matched the quote to the dollar.&rdquo;
                 </p>
-                <p className="text-cream/70 text-xs">
+                <p className="text-white/70 text-xs">
                   — Maria G., Orlando · 2-bedroom move
                 </p>
               </div>
-              <div className="absolute top-5 left-5 bg-cream/95 backdrop-blur-sm text-charcoal text-xs font-bold px-3 py-1.5 rounded-full">
+              <div className="absolute top-5 left-5 bg-white/95 backdrop-blur-sm text-charcoal text-xs font-bold px-3 py-1.5 rounded-full">
                 Frank, owner
               </div>
             </div>

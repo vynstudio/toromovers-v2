@@ -39,7 +39,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="font-sans antialiased bg-cream text-charcoal">
+      <body className="font-sans antialiased bg-white text-charcoal">
         <Header />
         <div className="pb-20 lg:pb-0">{children}</div>
         <MobileBottomBar />

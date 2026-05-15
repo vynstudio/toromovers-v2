@@ -33,13 +33,13 @@ export function Header() {
       <header
         className={`sticky top-0 z-40 transition-all duration-200 ${
           scrolled
-            ? "bg-cream/95 backdrop-blur-md border-b border-rule"
+            ? "bg-white/95 backdrop-blur-md border-b border-rule"
             : "bg-transparent"
         }`}
       >
         <div className="container-page flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-md bg-toro-red flex items-center justify-center text-cream font-bold text-lg">
+            <div className="w-9 h-9 rounded-md bg-toro-red flex items-center justify-center text-white font-bold text-lg">
               T
             </div>
             <span className="font-bold text-lg tracking-tight text-charcoal">
@@ -52,7 +52,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-4 py-2 text-sm font-medium text-graphite hover:text-charcoal hover:bg-cream-dark rounded-md transition-colors"
+                className="px-4 py-2 text-sm font-medium text-graphite hover:text-charcoal hover:bg-off-white rounded-md transition-colors"
               >
                 {item.label}
               </Link>
@@ -68,7 +68,7 @@ export function Header() {
             </a>
             <Link
               href="/quote"
-              className="hidden md:inline-flex items-center px-5 py-2.5 rounded-md font-semibold text-sm text-cream bg-toro-red hover:bg-toro-red-dark transition-colors"
+              className="hidden md:inline-flex items-center px-5 py-2.5 rounded-md font-semibold text-sm text-white bg-toro-red hover:bg-toro-red-dark transition-colors"
             >
               Free quote
             </Link>
@@ -85,7 +85,7 @@ export function Header() {
       </header>
 
       {open && (
-        <div className="fixed inset-0 z-50 bg-cream lg:hidden flex flex-col">
+        <div className="fixed inset-0 z-50 bg-white lg:hidden flex flex-col">
           <div className="container-page flex items-center justify-between h-16">
             <span className="font-bold text-lg text-charcoal">Menu</span>
             <button

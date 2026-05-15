@@ -10,7 +10,7 @@ interface ReviewCardProps {
 
 export function ReviewCard({ name, city, rating = 5, body, date }: ReviewCardProps) {
   return (
-    <article className="bg-bone rounded-lg p-6 border border-rule shadow-card flex flex-col">
+    <article className="bg-off-white rounded-lg p-6 border border-rule shadow-card flex flex-col">
       <div className="flex items-center gap-1 mb-3">
         {Array.from({ length: rating }).map((_, i) => (
           <Star key={i} className="w-4 h-4 fill-gold text-gold" />

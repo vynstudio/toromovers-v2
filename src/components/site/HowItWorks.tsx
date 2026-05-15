@@ -11,7 +11,7 @@ const steps = [
     icon: Calendar,
     num: "02",
     title: "Get a flat-rate quote",
-    body: "Same day, usually within the hour. Written down. No 'starting at' games — the price you see is the price you pay.",
+    body: "Within the hour, usually faster. We walk you through hourly rates, expected time, and lock in your date with a small deposit.",
   },
   {
     icon: Truck,
@@ -32,12 +32,12 @@ export function HowItWorks() {
         {steps.map((step) => (
           <div
             key={step.num}
-            className="relative bg-bone rounded-xl p-7 border border-rule"
+            className="relative bg-off-white rounded-xl p-7 border border-rule"
           >
-            <span className="absolute top-5 right-5 text-5xl font-bold text-cream-dark leading-none select-none">
+            <span className="absolute top-5 right-5 text-5xl font-bold text-rule leading-none select-none">
               {step.num}
             </span>
-            <div className="w-12 h-12 rounded-lg bg-toro-red text-cream flex items-center justify-center mb-5">
+            <div className="w-12 h-12 rounded-lg bg-toro-red text-white flex items-center justify-center mb-5">
               <step.icon className="w-6 h-6" />
             </div>
             <h3 className="mb-3 text-xl">{step.title}</h3>

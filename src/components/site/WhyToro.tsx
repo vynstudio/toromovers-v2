@@ -14,8 +14,8 @@ const reasons = [
     body: "Crew speaks your language. Quotes, contracts, and moving-day communication all available in either.",
   },
   {
-    title: "Flat-rate pricing, written down",
-    body: "No 'starting at $89/hr' bait. You get one price for the whole job — fuel, stairs, mileage included — before we touch a box.",
+    title: "Local, focused, and small on purpose",
+    body: "We don't run a national franchise or chase every job in the state. We stay focused on Orlando, Lake Mary, and Winter Park so our crews know the buildings, the routes, and the parking rules.",
   },
 ];
 

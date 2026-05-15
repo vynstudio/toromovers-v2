@@ -21,16 +21,16 @@ const cities = [
 
 export function ServiceAreas() {
   return (
-    <section className="section bg-charcoal text-cream">
+    <section className="section bg-charcoal text-white">
       <div className="container-page">
         <div className="max-w-2xl mb-12">
           <p className="text-sm font-semibold text-gold uppercase tracking-wider mb-3">
             Service areas
           </p>
-          <h2 className="text-cream">
+          <h2 className="text-white">
             We don&rsquo;t move everywhere. On purpose.
           </h2>
-          <p className="mt-5 text-cream/80 text-lg">
+          <p className="mt-5 text-white/80 text-lg">
             We focus where we live. That&rsquo;s how we keep crews local, quotes
             accurate, and reviews honest.
           </p>
@@ -45,10 +45,10 @@ export function ServiceAreas() {
             >
               <div className="flex items-start justify-between mb-4">
                 <MapPin className="w-5 h-5 text-gold" />
-                <ArrowUpRight className="w-5 h-5 text-cream/40 group-hover:text-gold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                <ArrowUpRight className="w-5 h-5 text-white/40 group-hover:text-gold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
               </div>
-              <h3 className="text-cream text-2xl mb-2">{city.name}</h3>
-              <p className="text-cream/70 text-sm leading-relaxed">{city.blurb}</p>
+              <h3 className="text-white text-2xl mb-2">{city.name}</h3>
+              <p className="text-white/70 text-sm leading-relaxed">{city.blurb}</p>
             </Link>
           ))}
         </div>

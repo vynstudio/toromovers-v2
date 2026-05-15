@@ -9,6 +9,10 @@ export const faqs: Faq[] = [
     a: "We don’t charge by the hour — we give you a flat rate for the whole move. Most 1-bedroom apartments in Orlando run $400–$650, 2-bedrooms $650–$1,100, 3-bedroom houses $1,200–$2,000. Your quote stays the same whether the day takes 4 hours or 6.",
   },
   {
+    q: "What’s included in your hourly rate?",
+    a: "Two bilingual W-2 movers, all moving labor (loading, transporting, unloading), basic protective equipment (blankets, dollies, straps), and travel time within Central Florida. The hourly clock starts when the crew arrives at your address and stops when the last item is placed in your new home.",
+  },
+  {
     q: "Are you licensed and insured?",
     a: "Yes. Toro Movers is fully licensed by the Florida Department of Transportation, FMCSA registered, and carries full cargo and liability insurance. We can email you copies before your move.",
   },
